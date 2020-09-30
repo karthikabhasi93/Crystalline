@@ -13,6 +13,9 @@
           <div class="login-header">
             <h3>LOGIN</h3>
             <p>Please enter your credentials to login.</p>
+            <?php if(!empty($this->session->flashdata('msg'))){?>
+            <p style="color:red;text-align:center"><?=$this->session->flashdata('msg')?></p>
+            <?php }?>
           </div>
         </div>
         <form class="login-form" action="<?= base_url('login')?>" method="post">

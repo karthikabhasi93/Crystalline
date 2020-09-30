@@ -14,10 +14,10 @@
 </head>
 
 <body>
-  <div class="container">
+  <div class="container-fluid">
     <div class="row">
-      <div class="col-md-2">
-        <h1>Admin Read</h1>
+      <div class="col-md-2" style="background:#f4f4f4;min-height:100vh">
+        <h3>Admin Read</h3>
 
         <ul>
           <li><a href="<?=base_url('admin/')?>">Home</a></li>

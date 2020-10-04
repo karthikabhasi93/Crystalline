@@ -19,7 +19,7 @@ class Login extends MY_Controller {
             $res = $this->LoginModel->auth($data);
 
             if(!empty($res)){
-                $this->session->set_userdata('admin_id',$res->id);
+                $this->session->set_userdata('admin_id',$res->username);
                 redirect(base_url('admin'));
                
             }else{

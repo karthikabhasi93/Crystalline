@@ -13,7 +13,7 @@ class Admin extends MY_Controller {
     public function index(){
         try{
 			$crud = new grocery_CRUD();
-			$crud->set_theme('tablestrap');
+			$crud->set_theme('tablestrap4');
             $crud->set_table('users');
             $crud->set_subject('user');
 
@@ -26,7 +26,6 @@ class Admin extends MY_Controller {
             $crud->unset_read();
             // $crud->callback_insert(array($this,'encrypt_password_and_insert_callback'));
             $output = $crud->render();
-            
 
 			$this->load->view("home",$output);
 		}catch(Exception $e){
@@ -43,7 +42,7 @@ class Admin extends MY_Controller {
     public function aboutslider(){
         try{
 			$crud = new grocery_CRUD();
-			$crud->set_theme('tablestrap');
+			$crud->set_theme('tablestrap4');
             $crud->set_table('aboutslider');
             $crud->set_subject('About Slider');
 
@@ -64,10 +63,80 @@ class Admin extends MY_Controller {
 			show_error($e->getMessage().' --- '.$e->getTraceAsString());
 		}
     }
+    public function contact(){
+        try{
+			$crud = new grocery_CRUD();
+			$crud->set_theme('tablestrap4');
+            $crud->set_table('contactform');
+            $crud->set_subject('contacts');
+
+            $crud->set_field_upload('image','assets/uploads/files');
+            $crud->unset_clone();
+            $crud->unset_edit();
+            $crud->unset_delete();
+            $crud->unset_export();
+            $crud->unset_add();
+            $crud->unset_read();
+            // $crud->callback_insert(array($this,'encrypt_password_and_insert_callback'));
+            $output = $crud->render();
+            
+
+			$this->load->view("home",$output);
+		}catch(Exception $e){
+			show_error($e->getMessage().' --- '.$e->getTraceAsString());
+		}
+    }
+    public function feedback(){
+        try{
+			$crud = new grocery_CRUD();
+			$crud->set_theme('tablestrap4');
+            $crud->set_table('feedback');
+            $crud->set_subject('Testimonial');
+
+            $crud->set_field_upload('photo','assets/uploads/files');
+            $crud->unset_clone();
+            // $crud->unset_edit();
+            // $crud->unset_delete();
+            $crud->unset_export();
+            // $crud->unset_add();
+            $crud->unset_read();
+            // $crud->callback_insert(array($this,'encrypt_password_and_insert_callback'));
+            $output = $crud->render();
+            
+
+			$this->load->view("home",$output);
+		}catch(Exception $e){
+			show_error($e->getMessage().' --- '.$e->getTraceAsString());
+		}
+    }
+    public function findus(){
+        try{
+			$crud = new grocery_CRUD();
+			$crud->set_theme('tablestrap4');
+            $crud->set_table('findus');
+            $crud->set_subject('Site Seetings');
+
+            // $crud->set_field_upload('photo','assets/uploads/files');
+            $crud->unset_clone();
+            // $crud->unset_edit();
+            $crud->unset_delete();
+            $crud->unset_export();
+            $crud->unset_add();
+            $crud->unset_delete();
+            $crud->unset_read();
+            // $crud->callback_insert(array($this,'encrypt_password_and_insert_callback'));
+            $output = $crud->render();
+            
+
+			$this->load->view("home",$output);
+		}catch(Exception $e){
+			show_error($e->getMessage().' --- '.$e->getTraceAsString());
+		}
+    }
     public function banner(){
         try{
 			$crud = new grocery_CRUD();
-			$crud->set_theme('tablestrap');
+			$crud->set_theme('tablestrap4');
             $crud->set_table('mainslider');
             $crud->set_subject('About Slider');
 
@@ -105,11 +174,30 @@ class Admin extends MY_Controller {
         }
 
     }
-    function slider(){
+    function services(){
         try{
 			$crud = new grocery_CRUD();
-			$crud->set_theme('datatables');
-            $crud->set_table('mainslider');
+			$crud->set_theme('tablestrap4');
+            $crud->set_table('services');
+            $crud->set_subject('service');
+            $crud->set_field_upload('icon','assets/uploads/files');
+            $crud->unset_export();
+            $crud->unset_print();
+            $crud->unset_clone();
+            $output = $crud->render();
+            
+
+			$this->load->view("home",$output);
+		}catch(Exception $e){
+			show_error($e->getMessage().' --- '.$e->getTraceAsString());
+		}
+    }
+    function gallery(){
+        try{
+			$crud = new grocery_CRUD();
+			$crud->set_theme('tablestrap4');
+            $crud->set_table('gallery');
+            $crud->set_subject('Gallery');
             $crud->set_field_upload('image','assets/uploads/files');
             $crud->unset_export();
             $crud->unset_print();
@@ -123,7 +211,8 @@ class Admin extends MY_Controller {
 		}
     }
 
-    function aboutus(){
-        
+    function logout(){
+        $this->session->sess_destroy();
+        redirect(base_url('admin'));
     }
 }

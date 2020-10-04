@@ -1,64 +1,76 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-?><!DOCTYPE html>
+?>
+		<h1><?php //echo $heading; ?></h1>
+		<?php //echo $message; ?>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<title>404 Page Not Found</title>
-<style type="text/css">
-
-::selection { background-color: #E13300; color: white; }
-::-moz-selection { background-color: #E13300; color: white; }
-
-body {
-	background-color: #fff;
-	margin: 40px;
-	font: 13px/20px normal Helvetica, Arial, sans-serif;
-	color: #4F5155;
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+	body {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-flow: row wrap;
+  align-content: center;
+  -webkit-box-pack: center;
+          justify-content: center;
 }
 
-a {
-	color: #003399;
-	background-color: transparent;
-	font-weight: normal;
+div {
+  width: 100%;
+  text-align: center;
 }
 
-h1 {
-	color: #444;
-	background-color: transparent;
-	border-bottom: 1px solid #D0D0D0;
-	font-size: 19px;
-	font-weight: normal;
-	margin: 0 0 14px 0;
-	padding: 14px 15px 10px 15px;
+.number {
+  background: #fff;
+  position: relative;
+  font: 900 30vmin 'Consolas';
+  letter-spacing: 5vmin;
+  text-shadow: 2px -1px 0 #000, 4px -2px 0 #0a0a0a, 6px -3px 0 #0f0f0f, 8px -4px 0 #141414, 10px -5px 0 #1a1a1a, 12px -6px 0 #1f1f1f, 14px -7px 0 #242424, 16px -8px 0 #292929;
+}
+.number::before {
+  background-color: #673ab7;
+  background-image: radial-gradient(closest-side at 50% 50%, #ffc107 100%, rgba(0, 0, 0, 0)), radial-gradient(closest-side at 50% 50%, #e91e63 100%, rgba(0, 0, 0, 0));
+  background-repeat: repeat-x;
+  background-size: 40vmin 40vmin;
+  background-position: -100vmin 20vmin, 100vmin -25vmin;
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: screen;
+  -webkit-animation: moving 10s linear infinite both;
+          animation: moving 10s linear infinite both;
+  display: block;
+  position: absolute;
+  content: "";
+}
+@-webkit-keyframes moving {
+  to {
+    background-position: 100vmin 20vmin, -100vmin -25vmin;
+  }
+}
+@keyframes moving {
+  to {
+    background-position: 100vmin 20vmin, -100vmin -25vmin;
+  }
+}
+.text {
+  font: 400 5vmin "Courgette";
+}
+.text span {
+  font-size: 10vmin;
 }
 
-code {
-	font-family: Consolas, Monaco, Courier New, Courier, monospace;
-	font-size: 12px;
-	background-color: #f9f9f9;
-	border: 1px solid #D0D0D0;
-	color: #002166;
-	display: block;
-	margin: 14px 0 14px 0;
-	padding: 12px 10px 12px 10px;
-}
-
-#container {
-	margin: 10px;
-	border: 1px solid #D0D0D0;
-	box-shadow: 0 0 8px #D0D0D0;
-}
-
-p {
-	margin: 12px 15px 12px 15px;
-}
-</style>
+	</style>
 </head>
 <body>
-	<div id="container">
-		<h1><?php echo $heading; ?></h1>
-		<?php echo $message; ?>
-	</div>
+<div class="number">404</div>
+<div class="text" style="text-transform:uppercase">page not found</div>
 </body>
 </html>
+
+

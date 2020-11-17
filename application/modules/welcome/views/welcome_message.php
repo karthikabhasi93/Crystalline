@@ -44,18 +44,49 @@
                 top: 0;
                 padding: 10px 0 !important;
             }
-
+            .error{
+                color:red;
+            }
         </style>
     </head>
-    <body data-spy="scroll" data-target="navbar" data-offset="50">
-        <script src='https://code.jquery.com/jquery-3.5.1.min.js'></script>
-        <body>
+
+    <body data-spy="scroll" data-target="#primary_nav" data-offset="50">
+    <div id="contact" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+            <div class="modal-header modal-head">
+                <div class="modal-logo">
+                    <p>Crystal <br>Interiors</p>
+                </div>
+                <p class="chat-head">CrystalLine Interiors <br> <span>Budget-friendly interior designing </span></p>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              
+            </div>
+            <div class="modal-body">
+                <p>Get exclusive offers on Interior Designing. Talk to our representatives for the best deals.</p>
+                <div class="row">
+                    <div class="col-xs-9">
+                        <input type="text" class="form-control send-text" id="mobile_number" placeholder="Type your message">
+                    </div>
+                    <div class="col-xs-3">
+                        <button class="btn send-btn"><i class="fa fa-paper-plane" aria-hidden="true" onclick="gotoWhatsapp()"></i></button>
+                    </div>
+                </div>
+               
+            </div>
+            
+            </div>
+
+        </div>
+        </div>
 
             <!-- banner -->
-            <div class="main_section_agile" id="home">
+            <div class="main_section_agile" id="home" >
                 <div class="agileits_w3layouts_banner_nav">
 
-                    <nav class="navbar navbar-default " data-spy="affix" data-offset-top="10">
+                    <nav class="navbar navbar-default " data-spy="affix" data-offset-top="10" id="primary_nav">
                         <div class="container">
                             <div class="navbar-header navbar-left">
                                 <button
@@ -69,7 +100,7 @@
                                     <span class="icon-bar"></span>
                                 </button>
                                 <h1>
-                                    <a class="navbar-brand" href="index.html">
+                                    <a class="navbar-brand" href="<?=base_url()?>">
                                         CrystalLine Interiors<i class="glyphicon glyphicon-lamp" aria-hidden="true"></i>
                                     </a>
                                 </h1>
@@ -82,7 +113,7 @@
                                 <nav class="link-effect-2" id="link-effect-2">
                                     <ul class="nav navbar-nav">
                                         <li class="active">
-                                            <a href="index.html" class="effect-3">Home</a>
+                                            <a href="<?=base_url()?>" class="effect-3">Home</a>
                                         </li>
                                         <li>
                                             <a href="#about" class="effect-3 scroll">About</a>
@@ -151,25 +182,15 @@
                 </h3>
                 <div class="about_grids">
                     <div class="col-md-6 about_left">
-                        <h4>Aenean fermentum purus dignissim metus sodales pretium. Sed consectetur
-                            consequat fermentum. Mauris tellus massa, vestibulum hendrerit eros non.</h4>
-                        <p>Phasellus congue erat sem, ut tempor mauris tincidunt non. Nulla in erat nec
-                            orci semper ultrices et sed libero. Vivamus sodales rhoncus arcu in vulputate
-                            semper tortor. Suspendisse potentitincidunt.</p>
-                        <p class="second_para">Phasellus congue erat sem, ut tempor mauris tincidunt
-                            non. Nulla in erat nec orci semper ultrices et sed libero. Vivamus sodales
-                            rhoncus arcu in vulputate semper tortor. Suspendisse potentitincidunt. Ut vel
-                            nunc mauris. Nam sed varius nisl. Vestibulum ante ipsum primis</p>
-
+                        <h4>Crystalline is a young dynamic architecture and interior design firm with over 7 years of experience focused on high end residence, apartments, restaurant and hospitality project. </h4>
+                        <p>We work passionately with our clients so as to achieve an efficient luxurious end result which they cherish for a lifetime. We like design to be visually powerful, intellectually elegant and above all timeless. We prioritize in bringing impact promised in the design to life, also peak on site efficiency with long term return for our clients.</p>
+                        <p>We offer an excellent combination of flexibility, durability, and affordability for each client along with the superior products, professional services and aims to deliver perfect results each time. Every project is unique just as we all are unique and at Crystalline, we know for each project requires a tailored team approach. We assign a design director to manage your project who has the specific skill set to make your dreams come true.</p>
+                       
                     </div>
                     <div class="col-md-6 about_right">
                         <div id="myCarousel" class="carousel slide" data-ride="carousel">
                             <!-- Indicators -->
-                            <ol class="carousel-indicators">
-                                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                                <li data-target="#myCarousel" data-slide-to="1"></li>
-                                <li data-target="#myCarousel" data-slide-to="2"></li>
-                            </ol>
+                           
                             <!-- Wrapper for slides -->
                             <div class="carousel-inner aboutslider">
                             <?php foreach($about_slider as $key=>$slider){?>
@@ -228,74 +249,17 @@
 
         <!---728x90--->
 
-        <!-- services bottom -->
-        <div class="bottom">
-            <div class="bottom_grids">
-                <div class="col-md-3 bottom_left">
-                    <img src="<?=base_url('assets/front/')?>images/left1.jpg" alt=""/>
-                </div>
-                <div class="col-md-6 bottom_middle">
-                    <div id="typed-strings" class="agileits_w3layouts_strings">
-                        <!-- <p>We do home
-                            <i>Decoration</i>
-                        </p>
-                        <p>We do
-                            <i>Office</i>
-                            Design</p>
-                        <p>We do
-                            <i>Interior</i>
-                            Design</p>
-                        <p>We do Commercial
-                            <i>Design</i>
-                        </p>
-                        <p>We do
-                            <i>Living room</i>
-                            Design</p>
-                        <p>We do
-                            <i>Wooden wall</i>
-                            Design</p> -->
-                            
-                    </div>
-                    <span id="typed" style="white-space:pre;"></span>
-                    <p class="typing_bottom" style="padding:10px 0px">Phasellus iaculis sapien in tellus gravida, a placerat
-                        lacus elementum. Nulla vitae lacus nec elit mollis pretium. Sed sed nunc lectus.
-                        Integer vehicula elit eget dignis simcon. gueint Aliquam sed ultricies tortor.
-                        Curabitur ut odio vestibulum, initse vehicula velit, sodales purus.<span>
-                            Nunc id tellus neque, Quisque. quis elit mollisinect pretium.</span>
-                        Sed sed nunc lectus tellus gravida gueint ipsum nec.</p>
-                    <h4>Watch our video here</h4>
-                    <a class="#" data-toggle="modal" data-target="#myModal1">
-                        <span class="glyphicon glyphicon-play-circle" aria-hidden="true"></span>
-                    </a>
-                </div>
-                <!-- Modal5 -->
-                <div class="modal fade" id="myModal1" tabindex="-1" role="dialog">
-                    <div class="modal-dialog">
-                        <!-- Modal content-->
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                <iframe src="https://player.vimeo.com/video/122016314"></iframe>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- //Modal5 -->
-                <!-- //model-video -->
-            </div>
-            <div class="col-md-3 bottom_right">
-                <img src="<?=base_url('assets/front/')?>images/right1.jpg" alt=""/>
-            </div>
-            <div class="clearfix"></div>
-        </div>
-        <!-- //services bottom -->
+        <!-- 360 degre  -->
+        <section id="360container">
+                    <iframe src="<?=base_url('welcome/view')?>" frameborder="0"></iframe>
+        </section>
+        <!-- 360 degre  end-->
 
         <!-- Stats -->
         <div class="section-w3ls stats" style="background:#ffc107">
             <div class="col-md-4 team_grid1">
-                <h3 class="heading">Fun
-                    <span>
-                        Facts</span>
+                <h3 class="heading">
+                    Fun <span> Facts</span>
                 </h3>
                 <h4>Interior designers Facts</h4>
                 <p>The essence of interior deign will always be about people and how they live</p>
@@ -408,7 +372,7 @@
                                 <li>
                                     <div class="item g1">
                                         <div class="agile-dish-caption">
-                                            <img class="lazyOwl" src="<?=base_url('assets/uploads/files/').$f->photo?>" alt=""/>
+                                            <img class="lazyOwl" src="<?=base_url('assets/uploads/files/').$f->photo?>" alt="" onError="this.src='https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png';"/>
                                             <h4><?=$f->name?></h4>
                                         </div>
 
@@ -474,12 +438,20 @@
                             <h3>Send us a message</h3>
                         </div>
                         <div class="agileinfo-contact-form-grid">
-                            <form action="#" method="post">
-                                <input type="text" name="Name" placeholder="Name" required="">
-                                <input type="text" name="Subject" placeholder="Subject" required="">
-                                <input type="email" name="Email" placeholder="Email" required="">
-                                <textarea name="Message" placeholder="Message" required=""></textarea>
-                                <button class="btn1">Submit</button>
+                            <form action="#" method="post" id="contactForm" data-url="<?= base_url('welcome/form')?>">
+                            <div class="form-group">
+                                <input type="text" name="name"  placeholder="Name" >
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="number" placeholder="Mobile number">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" name="email" placeholder="Email" >
+                            </div>
+                            <div class="form-group">
+                                <textarea name="message" placeholder="Message" ></textarea>
+                            </div>
+                                <button class="btn1" type="submit">Submit</button>
                             </form>
                         </div>
                     </div>
@@ -496,8 +468,7 @@
                     <div class="col-md-3 w3layouts_footer_grid" data-aos="fade-right">
                         <h3>About Company</h3>
                         <p>
-                            Aenean fermentum purus digniss immetus sodales pretium. Sedin consectetur
-                            consequat fermen. tumiauris tellus massa, vestibu lum hendrerit eros non.
+                        Crystalline is a young dynamic architecture and interior design firm with over 7 years of experience focused on high end residence, apartments, restaurant and hospitality project.
                         </p>
                         <ul class="social_agileinfo">
                             <li>
@@ -585,6 +556,8 @@
         </div>
         <!-- //footer -->
 
+      
+
         <!-- copyright -->
         <div class="copyright">
             <div class="container">
@@ -640,7 +613,13 @@
         <!-- //move to top-js-files -->
 
         <script type="text/javascript" src="<?=base_url('assets/front/')?>js/bootstrap-3.1.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="<?=base_url('assets/front/')?>js/form.js"></script>
         <!-- bootstrap js file -->
+
+        <!-- 360 -->
+        
 
     </body>
 </html>

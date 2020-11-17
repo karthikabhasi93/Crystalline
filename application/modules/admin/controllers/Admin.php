@@ -167,7 +167,7 @@ class Admin extends MY_Controller {
             $t = getimagesize($value['tmp_name']);
         }
         // return $t[0]."/".$t[1];
-        if($t[0]!==555 && $t[1]!==349){
+        if($t[0]!==1598 && $t[1]!==800){
             return "Your select image width is ".$t[0]." and height is ".$t[1].", which are not matching the proportions please follow Image size with width 555 and height 349";
         }else{
             return true;

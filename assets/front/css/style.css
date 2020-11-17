@@ -1133,6 +1133,71 @@ h4.title-agile.about.text-center span {
     color: #FFC107;
 	font-weight:600;
 }
+.modal-body{
+	background: url(../images/bg.png);
+	padding: 45px;
+}
+.modal-body p{
+	background: #d8ffbe;
+	padding: 20px;
+	font-size: 20px;
+}
+.modal-body p::before{
+	content: "";
+    padding: 15px;
+    height: 0;
+    width: 0;
+    background: #d8ffbe;
+    position: absolute;
+    left: 33px;
+    transform: rotate(45deg);
+    top: 55px;
+}
+.send-text{
+	margin: 20px;
+    border-radius: 50px;
+    padding: 25px;
+    border: 0;
+    margin-bottom: -20px;
+
+}
+.send-btn{
+	margin: 20px;
+    border-radius: 50px;
+    padding: 0;
+    border: 0;
+    margin-bottom: -20px;
+    width: 60px;
+    height: 60px;
+    background: #00a178;
+    color: #fff;
+    font-size: 20px;
+
+}
+.modal-head{
+	background: #025d4c;
+}
+.modal-logo{
+	background: #fff;
+	display: inline-flex;
+	padding: 25px 20px;
+	border-radius: 50%;
+	color: #025d4c;
+}
+.modal-logo p{
+	font-size: 10px;
+	font-weight: bolder;
+}
+.chat-head{
+	display:inline-flex;
+	color: #fff;
+	font-size: 23px;
+}
+.chat-head span{
+	display: contents;
+	font-size: 18px;
+	color: rgba(255, 255, 255, 0.5);
+}
 /*-- code for animated blinking cursor --*/
 .typed-cursor{
 	opacity: 1;
@@ -2288,8 +2353,8 @@ ul.con_inner_text.midimg li {
 		padding: 15px;
 	}
     #slider3-pager img {
-        width: 50px;
-        height: 50px;
+        width: 50px!important;
+        height: 50px!important;
     }
 	.bottom_left, .bottom_right {
 		width: 40%;
